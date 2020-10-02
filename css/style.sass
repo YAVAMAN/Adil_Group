@@ -1,0 +1,1203 @@
+// VARIABLES
+$white: #FFFFFF
+$coral: #FF5138
+$dark-blue: #04004D
+
+
+/* ==== FONTS ==== */
+@font-face 
+    font-family: 'Icomoon'
+    src: url('../fonts/icomoon.woff') format('woff')
+@font-face 
+    font-family: 'Raleway SemiBold'
+    src: url('../fonts/raleway_semibold.woff2') format('woff2')
+@font-face 
+    font-family: 'Raleway Bold'
+    src: url('../fonts/raleway_bold.woff2') format('woff2')
+@font-face  
+    font-family: 'Raleway Black'
+    src: url('../fonts/raleway_black.woff2') format('woff2')
+@font-face  
+    font-family: 'Raleway ExtraBold'
+    src: url('../fonts/raleway_extrabold.woff2') format('woff2')
+@font-face  
+    font-family: 'Raleway Regular'
+    src: url('../fonts/raleway_regular.woff2') format('woff2')
+@font-face  
+    font-family: 'Raleway Light'
+    src: url('../fonts/raleway_light.woff2') format('woff2') 
+@font-face  
+    font-family: 'Raleway Medium'
+    src: url('../fonts/raleway_medium.woff2') format('woff2')
+@font-face 
+	font-family: 'Gilroy Regular'
+	src: url('../fonts/gilroy-regular.woff2') format('woff2')	
+@font-face 
+	font-family: 'Gilroy ExtraBold'
+	src: url('../fonts/gilroy-extrabold.woff2') format('woff2')
+@font-face 
+	font-family: 'Gilroy SemiBold'
+	src: url('../fonts/gilroy-semibold.woff2') format('woff2')
+@font-face 
+	font-family: 'Montserrat Black'
+	src: url('../fonts/montserrat_black.woff2') format('woff2')
+@font-face 
+	font-family: 'Montserrat Light'
+	src: url('../fonts/montserrat_light.woff2') format('woff2')
+@font-face 
+	font-family: 'Montserrat SemiBold'
+	src: url('../fonts/montserrat_semibold.woff2') format('woff2')
+@font-face 
+	font-family: 'Segoe UI Regular'
+	src: url('../fonts/SegoeUI.woff2') format('woff2')
+@font-face 
+	font-family: 'Segoe UI Bold'
+	src: url('../fonts/SegoeUI-Bold.woff2') format('woff2')
+
+
+/* ==== SPECIFICATIONS ==== */
+html
+    font-size: 24px
+
+body
+    background-color: $white
+    color: $dark-blue
+
+.container 
+    width: 100%
+    max-width: 1330px
+    margin: 0 auto
+    padding: 0 15px
+
+a
+    text-decoration: none
+
+.h2__container
+    display: flex
+    justify-content: center
+
+h2
+    font-family: 'Raleway SemiBold'
+    font-size: 36px
+    text-align: center
+    &:after
+        display: block
+        width: 100%
+        margin: 5px auto 15px
+        content: ''
+        border-bottom: 3px solid $coral
+        border-radius: 50px
+
+h3
+    font-family: 'Raleway SemiBold'
+    
+
+/* ==== INTRO ==== */
+.intro
+    background: url("../img/intro-bg.png") center no-repeat
+    background-size: cover
+
+.logo
+    height: 59px
+
+header
+    display: flex
+    justify-content: space-between
+    padding-top: 24px
+
+.header__nav
+    width: 40%
+    display: flex
+    justify-content: space-between
+    align-items: center
+    a
+        position: relative
+        padding: 10px
+        font-family: 'Raleway ExtraBold'
+        font-size: 16px
+        text-transform: uppercase
+        color: $white
+        transition: color 0.3s
+            
+.header__nav a::before,
+.header__nav a::after
+    position: absolute
+    left: 0
+    width: 100%
+    height: 2px
+    background: $coral
+    content: ''
+    opacity: 0
+    transition: opacity 0.3s, transform 0.3s
+    transform: translateY(-10px)
+
+.header__nav a::before 
+	top: 0
+	transform: translateY(-10px)
+
+.header__nav a::after 
+	bottom: 0
+	transform: translateY(10px)
+
+.header__nav a:hover,
+.header__nav a:focus 
+	color: $white
+
+.header__nav a:hover::before,
+.header__nav a:focus::before,
+.header__nav a:hover::after,
+.header__nav a:focus::after 
+	opacity: 1
+	transform: translateY(0px)
+
+.header__contacts-m
+    display: none
+
+.header__contacts
+    text-align: right
+    line-height: 1.33
+    a
+        display: block
+        color: $white
+        transition: 0.3s
+
+.header__contacts a:hover
+    text-shadow: 1px 1px 5px #000
+
+.header__contacts-title
+    font-family: 'Gilroy Regular'
+    font-size: 16px
+    color: $white
+
+.header__tel
+    font-family: 'Gilroy Semibold'
+
+.header__mail
+    font-family: 'Raleway ExtraBold'
+    font-size: 19px
+
+.intro__title
+    width: 60%
+    margin-top: 150px
+    margin-bottom: 136px
+    font-family: 'Raleway Bold'
+    font-size: 49px
+    line-height: 1.59
+    text-shadow: 0 8px 15px rgba(0, 0, 0, 0.2)
+    text-transform: uppercase
+    color: $white
+
+.intro__info
+    color: $white
+    text-transform: uppercase
+    padding-bottom: 158px
+
+.info__title
+    font-family: 'Raleway Black'
+    font-size: 30px
+    color: $coral
+    margin-bottom: 40px
+
+.intro__info li
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.16)
+    font-family: 'Segoe UI Bold'
+    font-size: 22px
+    margin-bottom: 24px
+    &:before
+        content: "\25CF"
+        margin-right: 17px
+        color: $coral
+
+
+/* PROS */
+.pros
+    background: url("../img/pros-bg.png") center no-repeat
+    background-size: cover
+    padding-bottom: 186px
+
+.pros__title
+    padding-top: 85px
+
+.pros__subtitle
+    opacity: 0.8
+    font-family: 'Segoe UI Regular'
+    font-size: 20px
+    line-height: 1.35
+    text-align: center
+    color: $dark-blue
+
+.pros__inner
+    display: flex
+    justify-content: space-between
+    margin: 77px auto 115px
+    text-align: center
+
+.pros__inner-item
+    width: 20%
+
+.hi-icon 
+	display: inline-block
+	cursor: pointer
+	width: 100px
+	height: 100px
+	border-radius: 50%
+	text-align: center
+	position: relative
+	z-index: 1
+	color: $coral
+	transition: background 0.2s, color 0.2s
+    
+.hi-icon 
+    border: 1px solid #707070
+
+.hi-icon:after 
+	pointer-events: none
+	position: absolute
+	width: 100%
+	height: 100%
+	border-radius: 50%
+	content: ''
+	box-sizing: content-box
+
+.hi-icon:before
+	font-family: 'Icomoon'
+	font-size: 48px
+	line-height: 98px
+	display: block
+	-webkit-font-smoothing: antialiased
+
+.hi-icon:before 
+	content: "\e903"
+
+.hi-icon.two:before
+	content: "\e902"
+
+.hi-icon.three:before
+	content: "\e901"
+
+.hi-icon.four:before
+	content: "\e900"
+
+.hi-icon:after 
+	top: -7px
+	left: -7px
+	padding: 7px
+	box-shadow: 0 0 0 4px $coral
+	transition: transform 0.2s, opacity 0.2s
+	transform: scale(.8)
+	opacity: 0
+
+.hi-icon:hover
+	background: $coral
+	color: $white
+
+.hi-icon:hover
+    border-color: transparent
+
+.hi-icon:hover:after 
+	transform: scale(1)
+	opacity: 1
+
+.pros__item-title
+    margin-top: 34px
+    margin-bottom: 22px
+
+.pros__item-text
+    opacity: 0.8
+    font-family: 'Segoe UI Regular'
+    font-size: 18px
+    line-height: 1.33
+
+
+/* HOW */
+.how__inner
+    width: 100%
+    max-width: 1245px
+    display: flex
+    justify-content: space-between
+    padding: 125px 75px 42px 0
+    border-radius: 10px
+    box-shadow: 0 31px 50px 0 rgba(0, 0, 0, 0.16)
+    background-color: $white
+
+.inner__info
+    width: 33%
+    display: flex
+    flex-direction: column
+    padding: 0 75px
+
+.how__text
+    width: 326px
+    margin-top: 40px
+    margin-bottom: 62px
+    align-self: center
+    opacity: 0.8
+    font-family: 'Segoe UI Regular'
+    font-size: 18px
+    line-height: 1.33
+    color: $dark-blue
+
+.how__btn, .btn
+    font-family: 'Raleway SemiBold'
+    align-self: center
+    padding: 20px 40px
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.16)    
+    border-radius: 5px
+    background-color: $coral
+    text-transform: uppercase
+    font-size: 18px
+    color: $white
+    transition: 0.1s linear
+    &:hover
+        transform: scale(1.1)
+        box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.5)
+    
+.inner__list
+    width: 66%
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+
+.list__item
+    width: 50%
+    height: 33.3%
+
+.list__item-marker
+    float: left
+    margin-right: 30px
+    margin-bottom: 90px
+
+.inner__list-title
+    margin-bottom: 17px
+
+.inner_list-text
+    opacity: 0.8
+    font-family: 'Segoe UI Regular'
+    font-size: 18px
+    line-height: 1.33
+    color: $dark-blue
+
+
+/* ==== COMMISSION ====*/
+.commiss
+    background: url("../img/commiss-bg.png") center no-repeat
+    background-size: cover
+
+.commiss__inner
+    display: flex
+    align-items: center
+    justify-content: center
+
+.commiss__title
+    font-family: 'Raleway SemiBold'
+    font-size: 36px
+    line-height: 1.25
+    text-align: center
+    margin: 70px 40px 70px 0
+
+.commiss__percent
+    font-family: 'Montserrat SemiBold'
+    font-size: 66px
+    color: $coral
+
+
+/* ==== TYPES ==== */
+.types
+    background: url("../img/types-bg.png") center no-repeat
+    background-size: cover
+
+.types__title
+    padding-top: 115px
+    margin-bottom: 54px
+
+.types__inner
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    margin-bottom: 140px
+    perspective: 2000
+
+.types__inner-item
+    width: 32%
+    height: 400px
+    margin-bottom: 24px
+
+.types__inner-item:hover .rotate
+    transform: rotateY(180deg)
+
+.rotate
+    width: 100%
+    position: relative
+    transition: 0.4s
+    transform-style: preserve-3d
+
+.card__front
+    width: 100%
+    position: absolute
+    top: 0
+    left: 0
+    position: relative
+    z-index: 2
+    backface-visibility: hidden
+
+.rotate img
+    position: absolute
+
+.inner__item-title
+    position: absolute
+    display: inline-block
+    font-family: 'Raleway SemiBold'
+    top: 38px
+    left: 26px
+    color: $coral
+    &:after
+        display: block
+        width: 100%
+        margin: 15px auto 0
+        content: ''
+        border-bottom: 2px solid $white
+        border-radius: 50px
+
+.types__list
+    position: absolute
+    top: 115px
+
+.types__inner-item li
+    opacity: 0.8
+    font-family: 'Segoe UI Regular'
+    font-size: 18px
+    line-height: 1.33
+    color: $white
+    margin-bottom: 24px
+
+li span
+    font-family: 'Gilroy SemiBold'
+    font-size: 24px
+    color: #202246
+    padding: 6px 10px 6px 20px
+    background-color: rgba(255, 255, 255, 0.8)
+    border-bottom-right-radius: 5px
+    border-top-right-radius: 5px
+
+.card__back
+    width: 100%
+    position: relative
+    position: absolute
+    top: 0
+    left: 0
+    backface-visibility: hidden
+    transform: rotateY(180deg)
+
+.card__back-text
+    position: absolute
+    width: 85%
+    top: 115px
+    left: 27px
+    color: $white
+    opacity: 0.8
+    font-family: 'Segoe UI Regular'
+    font-size: 18px
+    line-height: 1.33
+
+.card__back-btn
+    position: absolute
+    top: 300px
+    left: 85px
+    font-family: 'Raleway SemiBold'
+    padding: 20px 40px
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.16)    
+    border-radius: 5px
+    background-color: $coral
+    text-transform: uppercase
+    font-size: 18px
+    color: $white
+
+#accordion
+    display: none
+
+
+/* ==== BANKS ====*/
+.banks
+    background: url("../img/banks-bg.png") center no-repeat
+    background-size: cover
+
+.banks__title
+    padding-top: 35px
+    font-family: 'Raleway SemiBold'
+    font-size: 36px
+    text-align: center
+    color: $dark-blue
+
+.ticker
+    padding: 55px 0 75px
+
+/* ==== ABOUT ====*/
+.about
+    background: url("../img/about-bg.png") center no-repeat
+    background-size: cover
+    height: 1081px
+
+.about__inner
+    display: flex
+    flex-direction: column
+    align-items: start
+    width: 50%
+    margin-left: 90px
+
+.about__title
+    padding-top: 273px
+    color: $white
+
+.about__subtitle
+    font-family: 'Raleway Regular'
+    color: $white
+    margin-top: 20px
+    margin-bottom: 35px
+
+.about__article
+    opacity: 0.8
+    font-family: 'Segoe UI Regular'
+    font-size: 18px
+    line-height: 1.33
+    color: $white
+
+
+/* ==== FORM ====*/
+.form__inner
+    position: relative
+    width: 100%
+    max-width: 1096px
+    height: 537px
+    margin: 0 auto 135px
+    background: url("../img/form-bg.png") center no-repeat
+    background-size: cover
+
+.form__title
+    font-family: 'Raleway SemiBold'
+    font-size: 36px
+    line-height: 1.53
+    color: $white
+    padding: 59px 0 0 88px
+
+.form__form
+    position: absolute
+    left: 88px
+    bottom: 55px
+
+input
+    width: 250px
+    margin-right: 70px
+    padding-bottom: 19px
+    border: none
+    border-bottom: 1px solid $white
+    background-color: transparent
+    font-family: 'Segoe UI Regular'
+    color: $white
+    &::placeholder
+        opacity: 0.6
+        font-family: 'Segoe UI Regular'
+        font-size: 18px
+        color: $white
+
+.form__btn
+    position: absolute
+    bottom: 0
+    border: none
+
+/* ==== FOOTER ====*/
+.footer
+    background-color: $dark-blue
+    color: $white
+
+.footer a:hover
+    text-shadow: 1px 1px 5px #fff
+
+.footer__container
+    width: 100%
+    max-width: 1096px
+
+.footer__inner
+    display: flex
+    justify-content: space-between
+    padding-top: 45px
+
+.footer__nav-inner
+    margin-top: auto
+
+.footer__nav-link
+    margin-right: 100px
+    opacity: 0.8
+    font-family: 'Segoe UI Regular'
+    font-size: 18px
+    color: $white
+
+.footer__nav-link:nth-child(4)
+    margin-right: 0
+    
+.footer__nav-line
+    margin: 0
+    margin-top: 16px
+
+.footer__contacts
+    text-align: right
+    margin: 11px 0 51px
+
+.footer__schedule
+    opacity: 0.7
+    font-family: 'Segoe UI Regular'
+    font-size: 14px
+    margin-bottom: 5px
+    
+.footer__tel
+    font-family: 'Gilroy SemiBold'
+    color: $white
+    letter-spacing: 0.5px
+
+.footer__mail, .footer__contacts-m
+    display: none
+
+.copyright__line
+    opacity: 0.4
+    height: 1px
+    border: none
+    background-color: $white
+
+.copyright
+    padding: 14px 0
+    opacity: 0.6
+    font-family: 'Segoe UI Regular'
+    font-size: 14px
+    color: $white
+
+@media screen and (max-width: 1600px)
+    html
+        font-size: 16px
+
+    .container 
+        width: 100%
+        max-width: 970px
+        margin: 0 auto
+        padding: 0 15px
+
+    h2
+        font-size: 24px
+        &:after
+            border-bottom: 2px solid $coral
+
+    .header__nav a
+        font-size: 12px
+
+    .header__contacts-title
+        font-size: 12px
+
+    .header__tel
+        margin-right: 0
+
+    .header__mail
+        font-size: 12px
+       
+    .intro__title
+        margin-top: 100px
+        margin-bottom: 84px
+        font-size: 34px
+
+    .intro__info
+        padding-bottom: 106px
+
+    .info__title
+        font-size: 21px
+        margin-bottom: 25px
+
+    .intro__info li
+        font-size: 16px
+        margin-bottom: 11px
+
+    .pros
+        padding-bottom: 160px
+
+    .pros__title
+        padding-top: 85px
+
+    .pros__subtitle
+        font-size: 14px
+
+    .pros__inner
+        margin: 47px auto 89px
+
+    .pros__item-title
+        margin: 30px 0 15px
+
+    .pros__item-text
+        font-size: 14px
+
+    .how__inner
+        max-width: 984px
+        padding: 75px 30px 0 0
+
+    .inner__info
+        padding: 0 60px
+
+    .how__title
+        text-align: left
+
+    .how__text
+        width: 276px
+        font-size: 14px
+
+    .how__h2-container
+        justify-content: start
+
+    .how__btn, .btn
+        padding: 14px 27px
+        font-size: 14px
+
+    .list__item-marker
+        margin: 0px 23px 69px 0
+
+    .inner__list-title
+        margin-bottom: 5px
+    
+    .inner_list-text
+        font-size: 14px
+
+    .commiss__title
+        font-size: 23px
+
+    .commiss__percent
+        font-size: 44px
+
+    .types__title
+        padding-top: 90px
+        margin-bottom: 25px
+
+    .types__inner
+        margin-bottom: 90px
+
+    .types__inner-item
+        width: 32%
+        height: 258px
+        margin-bottom: 16px
+
+    .types__inner-item img
+        width: 312px
+        height: 258px
+
+    .inner__item-title
+        top: 17px
+        left: 20px
+        &::after
+            margin-top: 15px
+            border-bottom: 1px solid $white
+
+    .types__list
+        top: 65px
+
+    .types__inner-item li
+        font-size: 14px
+        margin-bottom: 18px
+
+    li span
+        font-size: 14px
+        padding: 5px 10px 5px 20px
+
+    .card__back-text
+        font-size: 14px
+        top: 65px
+        left: 20px
+
+    .card__back-btn
+        top: 203px
+        left: 60px
+
+    .banks__title
+        padding-top: 22px
+        font-size: 24px
+
+    .ticker
+        padding: 36px 0 50px
+
+    .ticker img
+        width: 150px
+
+    .about__article
+        font-size: 14px
+    
+    .form__inner
+        max-width: 815px
+        height: 400px
+        margin: 0 auto 70px
+
+    input
+        width: 150px
+
+    .form__title
+        font-size: 24px
+
+    .footer__nav-link
+        margin-right: 50px
+
+@media screen and (max-width: 1025px)
+    .container
+        max-width: 700px
+
+    .header__nav
+        display: none
+
+    .header__contacts
+        display: none
+
+    .header__contacts-m
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+        width: 164px
+
+    .intro__title
+        width: 90%
+        margin-top: 167px
+        margin-bottom: 150px
+        font-size: 38px
+
+    .intro__info
+        padding-bottom: 256px
+    
+    .info__title
+        font-size: 26px
+
+    .intro__info li
+        font-size: 20px
+        margin-bottom: 15px
+
+    .pros
+        padding-bottom: 171px
+
+    .pros__title
+        padding-top: 40px
+
+    .pros__inner
+        margin-bottom: 70px
+
+    .pros__item-title
+        margin-bottom: 10px
+
+    .how__inner
+        max-width: 700px
+        padding: 0
+        padding-bottom: 80px
+        flex-wrap: wrap
+        position: relative
+
+    .inner__info
+        width: 100%
+
+    .how__h2-container
+        justify-content: center
+        padding-top: 60px
+
+    .how__text
+        width: 409px
+        text-align: center
+
+    .how__btn
+        position: absolute
+        bottom: 61px
+
+    .inner__list
+        width: 100%
+        padding-left: 65px
+        padding-right: 65px
+
+    .commiss__title
+        font-size: 20px
+        line-height: 1.45
+
+    .types__title
+        padding-top: 45px
+        margin-bottom: 45px
+
+    .types__inner
+        margin-bottom: 76px
+
+    .types__inner-item
+        width: 50%
+        margin-bottom: 36px
+
+    .ticker img
+        width: 128px
+
+    .form__form
+        width: 500px
+        display: flex
+        flex-wrap: wrap
+
+    .form__btn
+        right: -150px
+
+    .footer__container
+        position: relative
+
+    .footer__inner
+        justify-content: flex-start
+
+    .footer__nav-inner
+        margin-left: 67px
+
+    .footer__nav-link
+        display: block
+        font-size: 14px
+        margin-bottom: 10px
+
+    .footer__nav-line
+        display: none
+
+    .footer__contacts
+        position: absolute
+        top: 50px
+        right: 0
+
+@media screen and (max-width: 768px)
+    .container
+        max-width: 310px
+        padding: 0 5px
+
+    h2
+        font-size: 22px
+
+    .intro
+        background: url("../img/intro-bg-m.png") center no-repeat
+        background-size: cover
+
+    .logo
+        width: 152px
+        height: 37px
+
+    .header__contacts-m
+        width: 25px
+        margin-right: 20px
+
+    .header__contacts-m a
+        margin-bottom: 10px
+
+    .header__contacts-m img
+        width: 23px
+
+    .intro__title
+        font-size: 17px
+        line-height: 1.94
+        margin-top: 32px
+        margin-bottom: 93px
+
+    .intro__title span
+        font-size: 25px
+        line-height: 1.32
+
+    .intro__title span:nth-child(2)
+        font-size: 36px
+        line-height: 0.92
+
+    .intro__info
+        padding-bottom: 115px
+
+    .info__title
+        font-size: 16px
+        margin-bottom: 10px
+
+    .intro__info li
+        font-size: 12px
+        margin-bottom: 14px
+        &::before
+            margin-right: 5px
+
+    .pros
+        padding-bottom: 70px
+        background-image: none
+
+    .pros__inner
+        margin-bottom: 45px
+
+    .how__inner
+        max-width: 310px
+        padding-bottom: 125px
+
+    .inner__info
+        padding: 0
+
+    .how__h2-container
+        padding-top: 38px
+
+    .how__text
+        width: 281px
+        margin: 25px 0
+
+    .inner__list
+        padding-left: 5px
+        padding-right: 5px
+
+    .list__item
+        width: 100%
+        height: 15%
+
+    .list__item-marker
+        margin-bottom: 45px
+        margin-left: 10px
+
+    .commiss__inner
+        flex-direction: column
+
+    .commiss__title
+        font-size: 20px
+        line-height: 1.2
+        margin: 30px 2px 0
+
+    .commiss__title br
+        display: none
+
+    .commiss__percent
+        margin-bottom: 30px
+
+    .types__title
+        margin-bottom: 20px
+
+    .types__inner
+        display: none
+
+    #accordion
+        display: block
+        width: 100%
+        height: 650px
+        max-width: 290px
+        margin: 0 auto
+
+    .acc__title 
+        width: 270px
+        font-size: 16px
+        background-color: #202246
+        color: #FF5138
+        border-top-right-radius: 10px
+        border-top-left-radius: 10px
+        padding-top: 17px
+        padding-bottom: 17px
+        padding-left: 20px
+        margin-top: 10px
+
+    .acc__title div
+        display: inline-block
+        float: right
+        margin-right: 20px
+        
+    .acc__body 
+        background: url("../img/Group 422.png") center no-repeat
+        width: 290px
+        height: 258px
+        border-bottom-left-radius: 10px
+        border-bottom-right-radius: 10px
+        margin-bottom: 10px
+
+    .acc__list 
+        font-family: 'Segoe UI Regular'
+        color: #fff
+        font-size: 14px
+        padding-top: 40px
+
+    .acc__list li 
+        margin-bottom: 30px
+
+    .acc__list span 
+        font-size: 14px
+
+    .banks__title
+        padding-top: 22px
+        font-size: 22px
+        
+    .ticker img
+        width: 150px
+
+    .about
+        background: url("../img/about-bg-m.png") center no-repeat
+        background-size: cover
+        padding-bottom: 50px
+
+    .about__title
+        padding-top: 400px
+    
+    .about__inner
+        width: 100%
+        margin: 0
+
+    .form
+        background-image: linear-gradient(141deg, #202246 3%, #3fbbcd 170%)
+    
+    .form__inner
+        background-image: none
+        max-width: 210px
+        height: 350px
+        padding: 60px 55px
+        margin: 0 auto
+
+    .form__title
+        padding: 0
+        text-align: center
+        font-size: 20px
+
+    .form__form
+        width: 210px
+        top: 200px
+        left: 55px
+
+    input
+        width: 210px
+        height: 20px
+        margin: 0
+        &::placeholder
+            font-size: 14px
+
+    .input__tel
+        margin-top: -50px
+
+    .form__btn
+        left: 15px
+        
+    .footer__container
+        max-width: 310px
+        display: flex
+        flex-direction: column
+        align-items: center
+
+    .footer__inner
+        flex-direction: column
+        align-items: center
+
+    .footer__nav-inner
+        display: none
+
+    .footer__contacts
+        height: 150px
+        position: static
+        text-align: center
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        margin-top: 40px
+        margin-bottom: 63px
+
+    .footer__schedule
+        font-size: 10px
+
+    .footer__contacts-m
+        display: flex
+        justify-content: space-between
+
+    .footer__contacts-m img
+        width: 20px
+
+    .footer__mail
+        display: block
+        font-family: 'Raleway Medium'
+        font-size: 13px
+        color: $white
+
+    .copyright__line
+        width: 90%
+
+    .copyright
+        font-size: 9px
